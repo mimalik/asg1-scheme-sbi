@@ -1,4 +1,26 @@
-# $Id: 25-pi-e-fns.sb,v 1.1 2009-02-03 17:37:28-08 - - $
+head	1.1;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.1
+date	2009.02.04.01.37.28;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@-
+@
+text
+@# $Id: 25-pi-e-fns.sb,v 1.1 2008-02-05 15:34:37-08 - - $
 
 print pi, e
 let pi = 4 * atan(1)
@@ -20,3 +42,4 @@ print "ceil ( pi ) = ", ceil ( pi )
 print "floor( pi ) = ", floor( pi )
 print "round( pi ) = ", round( pi )
 
+@

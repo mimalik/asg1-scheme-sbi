@@ -8,7 +8,7 @@ then
    mkdir $sbirdir
 fi
 for sbfile in *.sb
-do
+do 
    cid + $sbfile
    $sbtran $sbfile >../sbir-files/${sbfile}ir
 done

@@ -1,4 +1,26 @@
-# $Id: 40-sort-array.sb,v 1.1 2009-02-03 17:37:29-08 - - $
+head	1.1;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.1
+date	2009.02.04.01.37.29;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@-
+@
+text
+@# $Id: 40-sort-array.sb,v 1.1 2008-02-05 15:34:45-08 - - $
 #
 # sort numbers
 #
@@ -41,3 +63,4 @@ sortlp:	print "a(", i, ")=", a( i )
 	goto stop
 error:	print "Invalid input"
 stop:
+@
