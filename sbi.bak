@@ -64,39 +64,6 @@
               (write-program-by-line sbprogfile program)))
               (interpret-program top program)
 )
-
-(for-each
-    (lambda (pair)
-            (symbol-put! (car pair) (cadr pair)))
-    `(
-
-        (/       ,(lambda (x y) (/ (+ x 0.0) (+ y 0.0))))
-        (%       ,(lambda (x y) (- x (* (/ x y) y))))
-        (+       ,+)
-        (^       ,expt)
-        (-       ,-)
-        (*       ,*)
-        (abs    ,abs)
-        (acos   ,acos)
-        (asin   ,asin)
-        (atan   ,atan)
-        (ceil   ,ceiling)
-        (cos    ,cos)
-        (exp    ,exp)
-        (floor  ,floor)
-        (log    ,log)
-        (log10  ,(lambda (x) (/ (log x) (log 10.0))))
-        (round  ,round)
-        (sin    ,sin)
-        (sqrt   ,sqrt)
-        (tan    ,tan)
-        (trunc  ,truncate)
-))
-(hash-set! *var-table* "pi"
-     3.141592653589793238462643383279502884197169399)
-(hash-set! *var-table* "e"
-     2.718281828459045235360287471352662497757247093)
-
 (define (interpret-program line-num prog)
   (if (> line-num (length prog))
   (exit 0)
