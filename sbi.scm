@@ -47,20 +47,14 @@
     (printf "==================================================~n")
     (printf "(~n")
     (map (lambda (line) (printf "~s~n" line)) program)
-    (printf ")~n")
-    (map(lambda (line) (set-label-table line)) program)
-)
-
-(define (incr x) (+ x 1))
-
-(define (decr x) (- x 1))
+    (printf ")~n"))
 
 (define (main arglist)
     (if (or (null? arglist) (not (null? (cdr arglist))))
         (usage-exit)
-        (define top 1)
         (let* ((sbprogfile (car arglist))
                (program (readlist-from-inputfile sbprogfile)))
+<<<<<<< HEAD
               (write-program-by-line sbprogfile program)))
               (interpret-program top program)
 )
@@ -113,6 +107,9 @@
 
 )
 
+=======
+              (write-program-by-line sbprogfile program))))
+>>>>>>> parent of c7dc466... Trying to add stuff to sbi.scm
 
 (when (terminal-port? *stdin*)
       (main (vector->list (current-command-line-arguments))))
